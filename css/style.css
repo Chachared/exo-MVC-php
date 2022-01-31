@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=Supermercado+One&display=swap");
+
+h1,
+h2,
+h3 {
+  font-family: "Supermercado One";
+}
+
+body {
+  font-family: "Dongle";
+  font-size: 25px;
+}
