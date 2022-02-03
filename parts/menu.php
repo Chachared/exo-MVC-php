@@ -11,10 +11,6 @@
                 <a class="btn btn-dark rounded-pill  mx-2" href="index.php">Accueil</a>
             </li>
             <li class="nav-item active">
-                <a class="btn btn-dark rounded-pill  mx-2" href="index.php?controller=product&action=list">Tous nos
-                    produits</a>
-            </li>
-            <li class="nav-item active">
                 <a class="btn btn-dark rounded-pill  mx-2" href="index.php?controller=security&action=login">Se
                     connecter</a>
             </li>
@@ -22,7 +18,10 @@
                 <a class="btn btn-dark rounded-pill  mx-2" href="index.php?controller=security&action=logout">Se
                     déconnecter</a>
             </li>
-
+            <li class="nav-item active">
+                <a class="btn btn-dark rounded-pill  mx-2" href="index.php?controller=product&action=list">Tous nos
+                    produits</a>
+            </li>
         </ul>
     </div>
 </nav>

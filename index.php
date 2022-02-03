@@ -46,6 +46,10 @@ if($_GET["controller"] == "product"){
     if($_GET["action"] == "showOne" && isset($_GET["id"])){
         $controller->showOne($_GET["id"]);
     }
+
+    if($_GET["action"] == "add"){
+        $controller->add();
+    }
  }
 
 ?>

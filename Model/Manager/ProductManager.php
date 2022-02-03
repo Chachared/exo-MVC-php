@@ -28,5 +28,15 @@ class ProductManager extends DbManager {
         return $object;
         
     } 
+
+    public function saveOne(Product $product){
+
+        $query = $this->bdd->prepare("INSERT INTO product (name, description,image) VALUES(:name, :description,:image)");
+        $query-> execute([
+            "name"=>$product->getName(),
+            "description"=>$product->getDescription(),
+            "image"=>$product->getImage()
+        ]);
+    }
 }
 ?>
