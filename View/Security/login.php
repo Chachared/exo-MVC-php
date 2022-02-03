@@ -1,4 +1,3 @@
-
 <html>
 
     <head>
@@ -15,6 +14,7 @@
                 ?>
 
         </header>
+
         <div class="container">
 
             <h2 class="text-center my-4">Espace connexion</h2>
@@ -42,6 +42,7 @@
             
             ?>
         </div>
+        
     </body>
 
 </html>

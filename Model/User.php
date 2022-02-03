@@ -22,10 +22,6 @@ class User {
         return $this->password;
     }
 
-    public function setId(){
-        $this -> id = $id;
-    }
-
     public function setUsername($username){
         $this->username = $username;
     }
@@ -34,3 +30,4 @@ class User {
         $this->password = $password;
     }
 }
+?>

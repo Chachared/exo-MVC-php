@@ -1,5 +1,5 @@
 <?php
-class SecurityController{
+class SecurityController {
 
     private $userManager;
 
@@ -8,8 +8,8 @@ class SecurityController{
     }
 
     public function login(){
-
-        $errors= null;
+    
+       $errors= null;
 
         if($_SERVER["REQUEST_METHOD"] == 'POST'){
             //effectuer les traitement sur mon formulaire
@@ -22,10 +22,12 @@ class SecurityController{
                 $user = $this->userManager->getOneByUsername($_POST["username"]);
 
                 if(!is_null($user) && password_verify($_POST["password"], $user->getPassword())){
-                    echo('redirection et connexion');
+                    $_SESSION['user']= serialize($user);
+                   header("Location: index.php?controller=default&action=homepage");
                 } else {
-                    $errors[] = 'identifiants incorrects';
+                    $errors[] = "Identifiants incorrects";
                 }
+
             }
         }
         //afficher une vue
@@ -38,11 +40,22 @@ class SecurityController{
         require 'View/Security/register.php';
     }
 
+    public function logout(){
+        setcookie("username");
+        session_destroy();
+        header("Location: index.php?controller=security&action=login");
+    }
+
+
+
     private function isValidLoginForm(){
         $errors = [];
 
         if(empty($_POST["username"])){
             $errors[] = "Veuillez saisir un nom d'utilisateur";
+        } else {
+            setcookie("username", $_POST["username"]);
+            $newCookie = $_POST["username"];
         }
 
         if(empty($_POST["password"])){
@@ -52,3 +65,4 @@ class SecurityController{
         return $errors;
     }
 }
+?>

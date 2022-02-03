@@ -14,11 +14,8 @@
         ?>
 
     <div class="container text-center">
-        <h2>C'est la page d'accueil</h2>
+        <h3 class="mt-2">Bonjour <?php if($this->user){echo($this->user->getUsername());} ?>, vous êtes sur la page d'accueil</h3>
     </div>
-
-   
-
 
     </body>
 

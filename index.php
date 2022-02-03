@@ -1,5 +1,17 @@
 <?php
+session_start();
+
+ini_set("display_errors",1);
+$displayErrors=ini_get("display_errors");
+
 require 'loader.php';
+
+// Affichage du mode developpeur ou production (dev = avec affichage erreurs, prod = sans affichage erreurs)
+if($displayErrors ==1){
+    echo ('<div class="alert alert-success" role="alert">Je suis en mode développement</div>');
+} else {
+    echo ('<div class="alert alert-danger" role="alert">Je suis en mode production</div>');
+}
 
 if(!isset($_GET["controller"]) && !isset($_GET["action"])){
     header("Location: index.php?controller=default&action=homepage");
@@ -19,7 +31,21 @@ if(!isset($_GET["controller"]) && !isset($_GET["action"])){
         $controller -> login();
      } else if ($_GET["action"] == 'register'){
         $controller -> register();
+     } else if($_GET["action"] == 'logout'){
+        $controller -> logout();
      }
  }
 
+if($_GET["controller"] == "product"){
+    $controller = new ProductController();
 
+    if($_GET["action"] == "list"){
+        $controller->list();
+    }
+
+    if($_GET["action"] == "showOne" && isset($_GET["id"])){
+        $controller->showOne($_GET["id"]);
+    }
+ }
+
+?>

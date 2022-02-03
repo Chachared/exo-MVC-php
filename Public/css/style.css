@@ -6,7 +6,14 @@ h3 {
   font-family: "Supermercado One";
 }
 
-body {
+body,
+tr,
+th,
+td {
   font-family: "Dongle";
-  font-size: 25px;
+  font-size: 22px;
+}
+
+.img-list {
+  max-height: 80px;
 }
