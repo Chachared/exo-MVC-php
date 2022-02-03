@@ -38,5 +38,21 @@ class ProductManager extends DbManager {
             "image"=>$product->getImage()
         ]);
     }
+
+    public function editOne(Product $product){
+        $query = $this->bdd->prepare("UPDATE product SET name=:name, description=:description, image=:image WHERE id=:id");
+        $query->execute ([
+            "id"=>$product->getId(),
+            "name"=>$product->getName(),
+            "description"=>$product->getDescription(),
+            "image"=>$product->getImage()
+        ]);
+    }
+
+    public function deleteOne($id){
+       
+        $query = $this->bdd->prepare("DELETE FROM product WHERE id = :id");
+        $query-> execute(["id"=>$id]); 
+    } 
 }
 ?>

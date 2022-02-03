@@ -19,7 +19,7 @@
 
         <div class="container text-center">
             <h3 class="mt-2">Les produits en vente</h3>
-            <a class="btn btn-dark rounded-pill mx-2" href="index.php?controller=product&action=add">Ajouter un
+            <a class="btn btn-dark rounded-pill mx-2" href="index.php?controller=product&action=edit">Ajouter un
                 produit</a>
 
             <table class="table table-striped table-hover">
@@ -40,10 +40,10 @@
                                         <td>'.$product->getName().'</td>
                                         <td>'.$product->getDescription().'</td>
                                         <td><img src="'.$product->getImage().'" class="img-list"></td>
-                                        <td><a href="index.php?controller=product&action=showOne&id='.$product->getId().'" class="btn btn-dark rounded-pill mb-2">Détail</a>
-                                            <a href="index.php?controller=product&action=edit"
+                                        <td><a href="index.php?controller=product&action=show&id='.$product->getId().'" class="btn btn-dark rounded-pill mb-2">Détail</a>
+                                            <a href="index.php?controller=product&action=edit&id='.$product->getId().'"
                                             class="btn btn-secondary rounded-pill mb-2">Edition</a>
-                                            <a href="index.php?controller=product&action=delete"
+                                            <a href="index.php?controller=product&action=delete&id='.$product->getId().'"
                                             class="btn btn-danger rounded-pill mb-2">Supprimer</a></td>
                                     </tr>');
                         }

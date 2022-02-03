@@ -43,12 +43,20 @@ if($_GET["controller"] == "product"){
         $controller->list();
     }
 
-    if($_GET["action"] == "showOne" && isset($_GET["id"])){
-        $controller->showOne($_GET["id"]);
+    if($_GET["action"] == "show" && isset($_GET["id"])){
+        $controller->show($_GET["id"]);
     }
 
     if($_GET["action"] == "add"){
         $controller->add();
+    }
+
+    if($_GET["action"] == "edit" && isset($_GET["id"])){
+        $controller->edit($_GET["id"]);
+    }
+
+    if($_GET["action"] == "delete" && isset($_GET["id"])){
+        $controller->delete($_GET["id"]);
     }
  }
 
