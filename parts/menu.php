@@ -19,8 +19,12 @@
                     déconnecter</a>
             </li>
             <li class="nav-item active">
-                <a class="btn btn-dark rounded-pill  mx-2" href="index.php?controller=product&action=list">Tous nos
+                <a class="btn btn-dark rounded-pill  mx-2" href="index.php?controller=product&action=list">Gérer les
                     produits</a>
+            </li>
+            <li class="nav-item active">
+                <a class="btn btn-dark rounded-pill  mx-2" href="index.php?controller=website&action=home">Espace
+                    clients</a>
             </li>
         </ul>
     </div>

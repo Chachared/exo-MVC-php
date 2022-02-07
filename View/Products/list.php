@@ -19,7 +19,7 @@
 
         <div class="container text-center">
             <h3 class="mt-2">Les produits en vente</h3>
-            <a class="btn btn-dark rounded-pill mx-2" href="index.php?controller=product&action=edit">Ajouter un
+            <a class="btn btn-dark rounded-pill mx-2" href="index.php?controller=product&action=add">Ajouter un
                 produit</a>
 
             <table class="table table-striped table-hover">

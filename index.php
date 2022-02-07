@@ -14,10 +14,18 @@ if($displayErrors ==1){
 }
 
 if(!isset($_GET["controller"]) && !isset($_GET["action"])){
-    header("Location: index.php?controller=default&action=homepage");
+    header("Location: index.php?controller=website&action=home");
 }
 
- if($_GET["controller"] == "default"){
+if($_GET["controller"] == "website"){
+    $controller = new WebsiteController();
+    if($_GET["action"] == "home"){
+        $controller -> customerHomepage();
+    }
+}
+
+
+if($_GET["controller"] == "default"){
     $controller = new DefaultController();
 
     if($_GET["action"] == "homepage"){

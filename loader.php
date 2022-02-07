@@ -13,5 +13,6 @@ require "Controller/AdminController.php";
 require "Controller/DefaultController.php";
 require "Controller/SecurityController.php";
 require "Controller/ProductController.php";
+require "Controller/WebsiteController.php";
 
 ?>
